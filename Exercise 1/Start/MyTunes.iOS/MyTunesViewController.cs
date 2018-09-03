@@ -1,6 +1,6 @@
 using UIKit;
 using System.Linq;
-using MyTunes.Shared;
+using MyTunes.PCL;
 
 namespace MyTunes
 {
@@ -21,7 +21,7 @@ namespace MyTunes
             //	DataSource = new string[] { "One", "Two", "Three" },
             //};
 
-            SongLoader songLoader = new SongLoader();
+            SongLoader songLoader = new SongLoader(new StreamLoaderIOS());
             var songList = await songLoader.Load();
 
             TableView.Source = new ViewControllerSource<Song>(TableView)

@@ -1,6 +1,6 @@
 ﻿using Android.App;
 using Android.OS;
-using MyTunes.Shared;
+using MyTunes.PCL;
 using System.Linq;
 
 namespace MyTunes
@@ -15,7 +15,7 @@ namespace MyTunes
             //	DataSource = new[] { "One", "Two", "Three" }
             //};
 
-            SongLoader songLoader = new SongLoader();
+            SongLoader songLoader = new SongLoader(new StreamLoaderDroid());
             var songList = await songLoader.Load();
 
             ListAdapter = new ListAdapter<Song>()
