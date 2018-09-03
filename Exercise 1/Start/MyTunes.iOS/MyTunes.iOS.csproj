@@ -158,6 +158,10 @@
       <Project>{6A059D75-DC80-4EBE-AAA3-4E2832BDC713}</Project>
       <Name>MyTunes.PCL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MyTunes.STD\MyTunes.STD.csproj">
+      <Project>{D821EDB9-5E41-4935-A211-8DB664E1584A}</Project>
+      <Name>MyTunes.STD</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="..\MyTunes.Shared\MyTunes.Shared.projitems" Label="Shared" Condition="Exists('..\MyTunes.Shared\MyTunes.Shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
