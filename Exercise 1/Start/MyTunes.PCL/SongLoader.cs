@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 using System.IO;
 using System.Threading.Tasks;
 using System.Reflection;
+using MyTunes.STD;
 
 namespace MyTunes.PCL
 {
@@ -20,9 +21,16 @@ namespace MyTunes.PCL
 
 		public async Task<IEnumerable<Song>> Load()
 		{
-			using (var reader = new StreamReader(OpenData())) {
-				return JsonConvert.DeserializeObject<List<Song>>(await reader.ReadToEndAsync());
-			}
+			using (var reader = new StreamReader(OpenData()))
+            {
+                var songs = JsonConvert.DeserializeObject<List<Song>>(await reader.ReadToEndAsync());
+                foreach (var song in songs)
+                {
+                    song.Name = song.Name.Prepend("★");
+                    song.Artist = song.Artist.Prepend("☆");
+                }
+                return songs;
+            }
 		}
 
 		private Stream OpenData()
