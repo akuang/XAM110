@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyTunes.Droid", "MyTunes.Dr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyTunes.UWP", "MyTunes.UWP\MyTunes.UWP.csproj", "{F9C452EE-F8D9-4690-B3FB-1EF35A5E1772}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MyTunes.Shared", "MyTunes.Shared\MyTunes.Shared.shproj", "{0009EE90-DCE6-41E6-9224-3D3725A86B87}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
